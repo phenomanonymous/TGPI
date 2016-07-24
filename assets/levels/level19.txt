@@ -1,0 +1,55 @@
+PPPPPPPPPPPPPPPPPPP
+P                 P
+P                 P
+P                 P
+P                 P
+P4444             P
+P4444             P
+PE444             S
+P4444PPPPPPPPPP   S
+P4444             S
+P4444             P
+P4444             P
+P                 P
+S       BBBBBBBBBBP
+S    P P3333333333P
+S    PUP3333333333P
+P      P3333333333P
+P     PP3333333333P
+S    PPP3333333333P
+S       3333333333P
+S3333   3333333333P
+S                 P
+S     P           P
+S                 P
+S                 P
+S                 P
+P     P           P
+P                 P
+P                 S
+P                 S
+P  BBUUUBB  @@@   S
+P  ! TTT !        P
+P  ! TTT ! S      P
+P  ! TTT ! S      P
+P  ! TTT ! S      P
+P  ! TTT !        P
+P                 S
+P                 S
+P                 P
+P     B           P
+P           S  XXXP
+P                 P
+PDDDDDDDDX  P  BBBP
+P        X        P
+P        X        P
+P        X        P
+P        X        P
+S        X        P
+S        XBBBBBBXXP
+S   ####   ####   P
+S                 P
+P                 P
+P                 P
+P                 P
+PBBBBBBBBBBBBBBBBBP

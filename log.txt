@@ -1,0 +1,12 @@
+player can now only teleport once before landing on the ground or a sticky block
+added gravity-inverting blocks
+added falling/vanishing blocks
+a whole FUCKTON of cleanup and reorganization (desperately needed)
+gravity blocks are bugged
+fixed gravity
+fixed teleport ghost flip
+fixed normal collisions
+increased bounce factor from -1.1 -> -1.2
+created global constant player jumps to keep track of # of jumps left
+	- this is for possible future development of double or multi-jumping
+undid the jump number bullshit because what the fuck everything broke

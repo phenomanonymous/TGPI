@@ -1,0 +1,22 @@
+Health?
+Bosses?
+Items?
+	Pickup to increase # of allowed teleports/jumps in between landing
+Moving platforms (non-death blocks)
+Easter eggs?
+Secret routes
+Blocks that blow wind/push player away?
+Graphics?
+	Little man instead of blue block
+	Animations for man walking
+Enemies?
+	Enemy AI?
+"Preview" where you'll end up teleporting with a ghost image of where you would go
+Level with two lanes of travel, one easy and one hard.  If you take the easy route, you have to double back thru hard anyway
+Story is you gotta infiltrate, set up some bomb or something, then GTFO within a certain amount of time or you die
+Sliding walls in general, maybe not just sticky
+Time trial versions of levels, infinite lives
+Finite lives, more of a challenge (also more annoying)
+Keep track of deaths on each level
+Checkpoints on harder levels, or in general
+mario jumping physics (hold jump vs tap jump causing different strengths of jump)

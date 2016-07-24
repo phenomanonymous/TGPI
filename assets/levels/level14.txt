@@ -1,0 +1,20 @@
+PPPPPPPPPPPPPPPPPXXXPPPPPPPPPPBBBBPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPBBBBPPPPPPPPPPPPPBBBBPPPPPPPPPPPPPPPPPPPPPPPPPP
+P           PPP   #     PPPPPP    TTTTTTTTPPPP      I         X    PPPPPPPPPPP    PPPPPPPPPPPPP    TTTTTT                   E
+P            PP   #    PPPPPPP    TPPPPPTTTTTT      I         X     PPPPPPPPPP    PPPPPPPPPPPPP    TPPPPP   PPPPPPPPPPPPPPPPP
+P             P   #   PPPPPPPP    PPPPPPPPPPPP      I         X      PPPPPPPPP    PPPPPPPPPPPPP    PPPPPP                  IP
+PUUUUPPPPPP                             PPPPPP    PPPPPPDDDDDDPDDDDDDDDPPPPPPP    PPPPPPPPPPPPP    PPPPPP                BB P
+P    PPPPPP                             PPPPPP    PPPPPP      P        PPPPPPP    PPPPPPPPPPPPP    PPPPPP               I   P
+P    PPPPPP                             PPPPPP    PPPPPPDDDPPPPPPPPPPPPPPPPPPP    PPPPPPPPPPPPP    PPPPPP             BB    P
+P    PPPPPPPPPPPPP                      PPPPPP    PPPPPP   BB          PPPPPPP    PPPPPPPPPPPPP    PPPPPP            I      P
+P    PPPPPPBBBBBBPPPPPPPPPPPPPPPDDDD    PPPPPP    PPPPPP               PPPPPPP    P         X      PPPPPP          BB       P
+P    PPPPPP      PPPPPPPPPPPPP          PPPPPP    PPPPPP      BB       PPPPPPP    P         X      PPPPPP         I         P
+P    PPPPPP      PPPPPPPPPPPP           PPPPPP    PPPPPP               PPPPPPP    P         X      PPPPPP       BB          P
+P    PPPPPP                             PPPPPP    PPPPPP         BB    PPPPPPP    PPPPPPPPPPPPPDDDDPPPPPP      I            P
+P    PPPPPP                             PPPPPP    PPPPPP               PPPPPPP    PPPPPPPPPPPPP    PPPPPP    BB             P
+P    PPPPPP                             PPPPPP    PPPPPP            BB PPPPPPP    PPPPPPPPPPPPS    PPPPPP   I               P
+P    PPPPPPDDDDDDPPPPPPPPPPPFFFFFFF  XXXXXXXXX    PPPPPP               PPPPPPP    PPPPPPPPPPPPS    PPPPPPIBB                P
+P    PPPPPP                                       PPPPPP               PPPPPPP    PPPPPPPPPPPPS    PPPPPP                   P
+P    PPPPPP                                       PPPPPPDDDPPPPPPPPPPPPPPPPPPP    PPPPPPPPPPPPP                             P
+P    PPPPPP                                       PPPPPP                  #       PPPPPPPPPPPPP                             P
+P    PPPPPP                                       PPPPPP                  #       PPPPPPPPPPPPP                             P
+PGGGGPPPPPPXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXP

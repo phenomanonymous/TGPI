@@ -1,0 +1,20 @@
+level1 :8418:
+level2 :23453:
+level3 :11121:frank
+level4 :8289:python
+level5 :19523:
+level6 :17952:phenom
+level7 :0:python
+level8 :16184:kd
+level9 :20162:
+level10:23280:
+level11:0:
+level12:20364:
+level13:13675:matt
+level14:49871:
+level15:38993:
+level16:43792:
+level17:37120:
+level18:233753:
+level19:472574:matt
+level20:48727:

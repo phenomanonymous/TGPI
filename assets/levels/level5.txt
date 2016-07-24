@@ -1,0 +1,38 @@
+PPPPPPPPPPPPPPPPPPP
+P                 P
+S                 P
+S                 E
+S PPPPPPPPPPPPPPPPP
+S                 P
+S                 P
+P                 P
+PPPPPPPP          P
+P                 P
+P                 P
+P            BBB  P
+P   #      PPPPPPPP
+P                 P
+P                 P
+P                 P
+P                 P
+P                 S
+P  BBBBB          S
+PPPPPPPPPPPPPPPPP S
+P        P        S
+P        P        S
+P        P        S
+P        P        S
+PPPUUUUUPPDDDDDDDDP
+P                 P
+P                 P
+P                 P
+P                 P
+P   BBB           P
+P         PP      P
+PDDDDDDDDDPPPPPUUUP
+P                 P
+P                 P
+P           PPP   P
+P         PPPPP   P
+P       PPPPPPPBBBP
+PPPPPPPPPPPPPPPPPPP

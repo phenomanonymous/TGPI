@@ -1,0 +1,20 @@
+PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP
+P     PPPPPPPPPP                        X              X             X                                                      P
+P     PPPPPPPPPP                        X              X             X                                                      P
+P     PPPPPPPPPP                        X              X                                                                    P
+P     PPPPPPPPPP                        X              X                                                                    P
+P     PPPPPPPPPP                        X              X                                                 X                  P
+P     PPPPPPPPPP                        X                                                                X                  E
+P     PPPPPPPPPP                        X                                                                X         PPPPPPPPPP
+P     PPPPPPPPPP                                                     X                                   X                  P
+P     PPPPPPPPPP                                                     X                                   X                  P
+P     PPPPPPPPPP                                       X             X                                   X                  P
+P     PPPPPPPPPP                                       X             X                                   X                  P
+P     PPPPPPPPPP                                       X             X                          B        X                  P
+P     PPPPPPPPPPUUUUFFFFFFFFF           X              X             X                                                      P
+P     PPPPPPPPPP    PPPPPP              X              X             X                                                      P
+P     PPPPPPPPPPUUUUPPPPPP         B    X     B        X    B        X      XX B XX                                         P
+P     PPPPPPPPPP    PPPPPP                                                                                                  P
+P     PPPPPPPPPPUUUUPPPPPP                                                                                                  P
+P     TTTTTTTTTTTTTTTTTTTT                                                                                                  P
+PPPPPPPPPPPPPPPPPPPPPPPPPPFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFP

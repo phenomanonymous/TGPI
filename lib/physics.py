@@ -1,0 +1,113 @@
+from pygame import *
+from blocks import *
+from functions import *
+from constants import *
+
+def collide(entity, xvel, yvel, platforms):
+        if not xvel ==0 or not yvel == 0:
+            entity.colliding = False # if i am moving in any direction, default colliding to false
+        if not xvel == 0:
+            entity.colliding_xvel = False
+        if not yvel == 0:
+            entity.colliding_yvel = False
+
+        #print str(entity.rect)
+        entity.on_moving_block = False
+        for p in platforms: # traverse list of platforms in level
+            if sprite.collide_rect(entity, p): # if player is currently colliding in some way with this platform
+                entity.colliding = True # now that i have definitely collided with something while moving, flip this flag
+                if not xvel == 0: # if i'm moving in the x direction
+                    entity.colliding_xvel = True
+                    entity.colliding_yvel = False
+                if not yvel == 0: # if i'm moving in the y direction
+                    entity.colliding_yvel = True
+                    entity.colliding_xvel = False
+############################################################
+########### HANDLE ALL SPECIAL COLLISION BLOCKS ############
+############################################################
+                if isinstance(p, TrickBlock): # do nothing, trick blocks are not physically there, they only look it
+                    pass
+                elif isinstance(p, OneWayUpBlock): # only collide from the top, not from the bottom or sides
+                    if yvel > 0:
+                        if entity.rect.centery < p.rect.top:
+                            entity.rect.bottom = p.rect.top
+                            entity.yvel = 0
+                            if entity.gravity > 0:
+                                entity.fall_vel = yvel
+                                entity.onGround = True
+                                entity.jumps = TOTAL_PLAYER_JUMPS
+                                entity.canTeleport = True
+                elif isinstance(p, OneWayDownBlock): # only collide from the bottom, not from the top or sides
+                    if yvel < 0:
+                        if entity.rect.centery > p.rect.bottom:
+                            entity.rect.top = p.rect.bottom
+                            entity.yvel = 0
+                            if entity.gravity < 0:
+                                entity.fall_vel = yvel
+                                entity.onGround = True
+                                entity.jumps = TOTAL_PLAYER_JUMPS
+                                entity.canTeleport = True
+############################################################
+############### HANDLE COLLISIONS NORMALLY #################
+############################################################
+                else:
+                    if isinstance(p, DeathBlock) or isinstance(p, MovingHorizontalDeathBlock) or isinstance(p, MovingVerticalDeathBlock):
+                        if not entity.invincible:
+                            entity.alive = False
+                        if isinstance(p, MovingHorizontalDeathBlock):
+                            entity.on_moving_block = True
+                            entity.xvel = p.xvel
+                        if isinstance(p, MovingVerticalDeathBlock):
+                            entity.on_moving_block = True
+                            entity.yvel = p.yvel
+                    elif isinstance(p, ExitBlock): # set alive to false so player cannot move, set win condition to true so they can spacebar to move on
+                        if entity.alive:
+                            entity.alive = False
+                            entity.beat_level = True
+                    if isinstance(p, FastBlock): # multiply player's x-direction movement speed
+                        entity.running = True
+                    if not isinstance(p, FastBlock): # player's x-direction movement speed is normal
+                        entity.running = False
+                    if isinstance(p, StickyBlock): # if its a sticky block, stop all y-direction movement and set sticky flag to true
+                        entity.yvel = 0
+                        entity.sticky = True
+                        entity.canTeleport = True
+                    if not isinstance(p, StickyBlock): # if its not a sticky block, set sticky flag to false
+                        entity.sticky = False
+                    if xvel > 0: # if player is colliding from the left
+                        entity.rect.right = p.rect.left
+                    if xvel < 0: # if player is colliding from the right
+                        entity.rect.left = p.rect.right
+                    if yvel > 0: # if player is colliding from the top
+                        entity.rect.bottom = p.rect.top
+                        entity.yvel = 0
+                        if entity.gravity > 0:
+                            entity.fall_vel = yvel
+                            entity.onGround = True
+                            entity.jumps = TOTAL_PLAYER_JUMPS
+                            entity.canTeleport = True
+                        if isinstance(p, VanishingBlock):
+                            p.start_falling = True
+                            entity.on_moving_block = True
+                            entity.xvel = p.xvel
+                            entity.yvel = p.yvel
+                        if isinstance(p, BouncyBlock): # if its a bouncy block, reverse y direction and increase speed
+                            if yvel > 1:
+                                entity.yvel = BOUNCE_STRENGTH * yvel
+                                entity.bounce_vel = entity.yvel
+                                entity.onGround = False
+                    if yvel < 0: # if player is colliding from the bottom
+                        entity.rect.top = p.rect.bottom
+                        entity.yvel = 0
+                        if entity.gravity < 0:
+                            entity.fall_vel = yvel
+                            entity.onGround = True
+                            entity.jumps = TOTAL_PLAYER_JUMPS
+                            entity.canTeleport = True
+                        if isinstance(p, BouncyBlock): # if its a bouncy block, reverse y direction and increase speed
+                            if yvel < -1:
+                                entity.yvel = BOUNCE_STRENGTH * yvel
+                                entity.bounce_vel = entity.yvel
+                                entity.onGround = False
+                    if isinstance(p, GravityBlock):
+                        invert_gravity(entity)
