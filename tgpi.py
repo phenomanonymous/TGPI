@@ -4,6 +4,17 @@
 ######################################################
 ###################### IMPORTS #######################
 ######################################################
+try:
+    from pygame import *
+except ImportError:
+    try:
+        import pip
+    except ImportError:
+        import subprocess
+        subprocess.call(['python', 'get-pip.py'])
+        import pip
+    pip.main(['install', 'pygame'])
+
 import os
 import lib
 import menus
@@ -20,8 +31,6 @@ from lib.level import *
 from menus.menu import *
 from menus.title import *
 from menus.pause import *
-
-from pygame import *
 
 ######################################################
 def main():
