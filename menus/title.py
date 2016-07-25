@@ -47,7 +47,10 @@ def get_player_name(screen):
     name_entry_screen = Surface(DISPLAY)
     name_entry_screen.fill((51,51,51))
     screen.blit(name_entry_screen, (0,0))
-    return ask(screen, "Name")
+    name = None
+    while not name:
+        name = ask(screen, "Name")
+    return name
 
 def display_hiscores_menu(screen, title_screen, title_menu):
     hiscores_menu_screen = Surface(DISPLAY)
