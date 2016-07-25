@@ -23,7 +23,8 @@ def display_pause_screen(screen, pause_screen):
                         on_pause = False
                     if pause_menu.list[pause_menu.get_position()] == "Main Menu":
                         on_pause = False
-                        display_title_screen(screen)
+                        # display_title_screen(screen)
+                        return "main"
                     elif pause_menu.list[pause_menu.get_position()] == "Quit":
                         raise SystemExit, "QUIT"
                 screen.blit(pause_screen, (0,0))

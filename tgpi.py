@@ -25,12 +25,16 @@ from pygame import *
 
 ######################################################
 def main():
+    global screen
+
+    screen = main_init()
+    start_game()
+
+def start_game():
     global screen, title_screen, pause_screen
     global title_menu, pause_menu
     global timer, myfont, game_start_time, deaths, display_debug, curr_level_number, total_time_elapsed
     global background_image
-
-    screen = main_init()
 
     set_menus()
 
@@ -53,6 +57,7 @@ def set_menus():
     global player_name
 
     pause_screen = pygame.display.set_mode(DISPLAY, FLAGS, DEPTH)
+    # DISPLAY TITLE MENU, GRAB PLAYER NAME:
     player_name = display_title_screen(screen)
 
 def make_level(level_number):
@@ -109,8 +114,10 @@ def game_loop(level_number):
                     player.alive = False # kill self
                 if e.type == KEYDOWN and (e.key == K_p or e.key == K_ESCAPE):
                     up = down = left = right = running = boost = False
-                    display_pause_screen(screen, pause_screen)
                     pause_timer = 1
+                    response = display_pause_screen(screen, pause_screen)
+                    if response == "main":
+                        start_game()
                 if e.type == KEYDOWN and e.key == K_m: # pause/unpause music
                     if music_paused:
                         pygame.mixer.music.unpause()
