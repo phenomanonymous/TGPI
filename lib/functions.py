@@ -247,4 +247,4 @@ def make_bg(isColor, background):
 def play_bg_music(sound):
     pygame.mixer.music.stop()
     pygame.mixer.music.load(sound)
-    pygame.mixer.music.play()
+    pygame.mixer.music.play(loops=-1)

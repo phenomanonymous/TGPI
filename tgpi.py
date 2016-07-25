@@ -43,7 +43,7 @@ def main():
     timer = pygame.time.Clock()
     myfont = pygame.font.SysFont("monospace", 15) # set up the font to be used in all text displayed on the game screen
     make_labels(myfont) # makes all static labels such as game over, continue, so on
-    #play_bg_music("assets/audio/background/Those of Us Who Fight.wav") # plays the sound file supplied
+    play_bg_music("assets/audio/background/Those of Us Who Fight.wav") # plays the sound file supplied
     game_start_time = pygame.time.get_ticks()
     game_loop(1) # the main game loop. most everything is handled here. 1 is supplied to start at level 1
 
@@ -52,11 +52,8 @@ def set_menus():
     global title_screen, pause_screen
     global player_name
 
-
     pause_screen = pygame.display.set_mode(DISPLAY, FLAGS, DEPTH)
     player_name = display_title_screen(screen)
-
-
 
 def make_level(level_number):
     global player, camera, bg, entities, platforms, falling_platforms, moving_platforms, particles, total_level_width, total_level_height
@@ -87,21 +84,29 @@ def game_loop(level_number):
 
         if player.alive: # if the player has not yet hit a win or lose condition (exit or death block)
             for e in pygame.event.get(): # for all input events the user sends
-############################################################
-####################### KEY DOWNS ##########################
-############################################################
+            ############################################################
+            ####################### KEY DOWNS ##########################
+            ############################################################
                 #TESTING SHORTCUTS
-                if e.type == KEYDOWN and e.key == K_BACKSLASH: display_debug = not display_debug # toggles debug display
-                if e.type == KEYDOWN and e.key == K_r: game_loop(level_number)  # reset level
-                if e.type == KEYDOWN and e.key == K_i: player.invincible = not player.invincible  # reset level
+                if e.type == KEYDOWN and e.key == K_BACKSLASH:
+                    display_debug = not display_debug # toggles debug display
+                if e.type == KEYDOWN and e.key == K_r:
+                    game_loop(level_number)  # reset level
+                if e.type == KEYDOWN and e.key == K_i:
+                    player.invincible = not player.invincible  # reset level
                 if e.type == KEYDOWN and e.key == K_n:
                     level_number += 1
                     game_loop(level_number) # go forward a level
                 if e.type == KEYDOWN and e.key == K_b:
-                    if level_number > 1: level_number-=1
+                    if level_number > 1:
+                        level_number-=1
                     game_loop(level_number) # go back a level
-                if e.type == KEYDOWN and e.key == K_g: invert_gravity(player) # invert gravity
-                if e.type == KEYDOWN and e.key == K_k: player.alive = False # kill self
+                if e.type == KEYDOWN and e.key == K_g:
+                    invert_gravity(player) # invert gravity
+                    for p in falling_platforms:
+                        invert_gravity(p)
+                if e.type == KEYDOWN and e.key == K_k:
+                    player.alive = False # kill self
                 if e.type == KEYDOWN and (e.key == K_p or e.key == K_ESCAPE):
                     up = down = left = right = running = boost = False
                     display_pause_screen(screen, pause_screen)
@@ -113,7 +118,8 @@ def game_loop(level_number):
                     else:
                         pygame.mixer.music.pause()
                         music_paused = True
-                if e.type == QUIT: raise SystemExit, "QUIT" # if they hit the x button of the window, quit the game and print "QUIT"
+                if e.type == QUIT: # if they hit the x button of the window
+                    raise SystemExit, "QUIT" # quit the game and print "QUIT"
                 #if e.type == KEYDOWN and e.key == K_ESCAPE: raise SystemExit, "ESCAPE" # if they hit the escape key, quit the game and print "ESCAPE"
                 if e.type == KEYDOWN and (e.key == K_w or e.key == K_UP): # if they're holding down the w or up key
                     up = True
@@ -130,9 +136,9 @@ def game_loop(level_number):
                         boost = False
                     else: # if they are moving in the x direction, teleport
                         boost = True
-############################################################
-######################## KEY UPS ###########################
-############################################################
+                ############################################################
+                ######################## KEY UPS ###########################
+                ############################################################
                 if e.type == KEYUP and (e.key == K_w or e.key == K_UP): # if they let go of the w or up key
                     up = False
                 if e.type == KEYUP and (e.key == K_s or e.key == K_DOWN): # if they let go of the s or down key

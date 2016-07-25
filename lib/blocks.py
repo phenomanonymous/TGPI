@@ -40,9 +40,9 @@ class VanishingBlock(Platform):
         if self.start_falling and self.delay > 0:
             self.delay -= 1
         if self.delay <= 0:
-            self.yvel += 0.3
+            self.yvel += 0.3 * self.gravity
             self.rect.y += self.yvel
-            if self.rect.y > total_level_height:
+            if self.rect.y > total_level_height or self.rect.y < 0:
                 self.alive = False
 
 class StickyBlock(Platform): # sticky blocks cause the player to stick to them, defying gravity
