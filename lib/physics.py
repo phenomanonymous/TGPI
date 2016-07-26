@@ -1,7 +1,7 @@
 from pygame import *
-from blocks import *
-from functions import *
-from constants import *
+from lib.blocks import *
+from lib.functions import *
+from lib.constants import *
 
 def collide(entity, xvel, yvel, platforms):
         if not xvel ==0 or not yvel == 0:

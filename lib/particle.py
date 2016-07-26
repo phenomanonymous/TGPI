@@ -1,4 +1,4 @@
-from constants import *
+from lib.constants import *
 import random
 import math
 

@@ -1,6 +1,6 @@
 from pygame import *
-from entities import *
-from constants import *
+from lib.entities import *
+from lib.constants import *
 ############################################################
 #################### PLATFORM CLASSES ######################
 ############################################################

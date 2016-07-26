@@ -1,8 +1,8 @@
-from constants import *
-from functions import *
-from entities import *
-from physics import *
-from spritesheet import *
+from lib.constants import *
+from lib.functions import *
+from lib.entities import *
+from lib.physics import *
+from lib.spritesheet import *
 import math
 
 ############################################################

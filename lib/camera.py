@@ -1,5 +1,5 @@
 from pygame import *
-from constants import *
+from lib.constants import *
 
 ############################################################
 ###################### CAMERA CLASS ########################

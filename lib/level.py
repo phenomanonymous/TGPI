@@ -1,9 +1,10 @@
-from functions import *
-from blocks import *
-from player import *
-from camera import *
-from spritesheet import *
+from lib.functions import *
+from lib.blocks import *
+from lib.player import *
+from lib.camera import *
+from lib.spritesheet import *
 import os
+
 def setup_level(isColor, background, level_number):
     global entities, platforms, falling_platforms, moving_platforms
     bg = make_bg(isColor, background)

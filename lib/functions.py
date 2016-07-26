@@ -1,10 +1,10 @@
-from constants import *
-from particle import *
 from pygame import *
-from entities import *
-from blocks import *
+from lib.constants import *
+from lib.particle import *
+from lib.entities import *
+from lib.blocks import *
 import pygame
-import camera
+import lib.camera
 import fileinput
 
 def main_init():
