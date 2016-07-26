@@ -26,8 +26,9 @@ def display_pause_screen(screen, pause_screen):
                         # display_title_screen(screen)
                         return "main"
                     elif pause_menu.list[pause_menu.get_position()] == "Quit":
-                        raise SystemExit, "QUIT"
+                        raise SystemExit("QUIT")
                 screen.blit(pause_screen, (0,0))
                 pygame.display.update()
-            elif event.type == QUIT: raise SystemExit, "QUIT" 
+            elif event.type == QUIT:
+                raise SystemExit("QUIT")
         pygame.time.wait(8)

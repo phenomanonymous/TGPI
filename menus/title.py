@@ -33,14 +33,15 @@ def display_title_screen(screen):
                         display_hiscores_menu(screen, title_screen, title_menu)
                         title_menu = create_menu(['Start','Hiscores','Quit'], title_screen, (51,51,51), (51,51,51))
                     elif title_menu.list[title_menu.get_position()] == "Quit":
-                        raise SystemExit, "QUIT"                       
+                        raise SystemExit("QUIT")
                 if event.key == K_ESCAPE:
                     pygame.display.quit()
-                    raise SystemExit, "ESCAPE"
+                    raise SystemExit("ESCAPE")
                 title_menu.draw()
                 screen.blit(title_screen, (0,0))
                 pygame.display.update()
-            elif event.type == QUIT: raise SystemExit, "QUIT" 
+            elif event.type == QUIT:
+                raise SystemExit("QUIT")
         pygame.time.wait(8)
 
 def get_player_name(screen):
@@ -85,7 +86,8 @@ def display_hiscores_menu(screen, title_screen, title_menu):
                         return "Back"
                 screen.blit(hiscores_menu_screen, (0,0))
                 pygame.display.update()
-            elif event.type == QUIT: raise SystemExit, "QUIT" 
+            elif event.type == QUIT:
+                raise SystemExit("QUIT")
         pygame.time.wait(8)
 
 
@@ -143,7 +145,8 @@ def display_least_deaths_hiscores(screen):
                 else:
                     screen.blit(hiscore_screen, (0,0))
                     pygame.display.update()
-            elif event.type == QUIT: raise SystemExit, "QUIT" 
+            elif event.type == QUIT:
+                raise SystemExit("QUIT")
         pygame.time.wait(8)
 
 
@@ -200,7 +203,8 @@ def display_life_timetrial_hiscores(screen):
                 else:
                     screen.blit(hiscore_screen, (0,0))
                     pygame.display.update()
-            elif event.type == QUIT: raise SystemExit, "QUIT" 
+            elif event.type == QUIT:
+                raise SystemExit("QUIT")
         pygame.time.wait(8)
 
 def display_timetrial_hiscores(screen):
@@ -256,7 +260,8 @@ def display_timetrial_hiscores(screen):
                 else:
                     screen.blit(hiscore_screen, (0,0))
                     pygame.display.update()
-            elif event.type == QUIT: raise SystemExit, "QUIT" 
+            elif event.type == QUIT:
+                raise SystemExit("QUIT")
         pygame.time.wait(8)
 
 class Field:

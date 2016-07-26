@@ -135,8 +135,8 @@ def game_loop(level_number):
                         pygame.mixer.music.pause()
                         music_paused = True
                 if e.type == QUIT: # if they hit the x button of the window
-                    raise SystemExit, "QUIT" # quit the game and print "QUIT"
-                #if e.type == KEYDOWN and e.key == K_ESCAPE: raise SystemExit, "ESCAPE" # if they hit the escape key, quit the game and print "ESCAPE"
+                    raise SystemExit("QUIT") # quit the game and print "QUIT"
+                #if e.type == KEYDOWN and e.key == K_ESCAPE: raise SystemExit("ESCAPE") # if they hit the escape key, quit the game and print "ESCAPE"
                 if e.type == KEYDOWN and (e.key == K_w or e.key == K_UP): # if they're holding down the w or up key
                     up = True
                 if e.type == KEYDOWN and (e.key == K_s or e.key == K_DOWN): # if they're holding down the s or down key
@@ -174,9 +174,10 @@ def game_loop(level_number):
         elif not player.alive and player.beat_level: # if they hit an exit block and won the level
             player.yvel += 0.1
             for e in pygame.event.get():
-                if e.type == QUIT: raise SystemExit, "QUIT" # if they hit the x button of the window, quit the game and print "QUIT"
+                if e.type == QUIT:
+                    raise SystemExit("QUIT") # if they hit the x button of the window, quit the game and print "QUIT"
                 if e.type == KEYDOWN and e.key == K_ESCAPE: # if they hit the escape key, quit the game and print "ESCAPE"
-                    raise SystemExit, "ESCAPE"
+                    raise SystemExit("ESCAPE")
                 if e.type == KEYDOWN and e.key == K_RETURN: # if they hit space, advance to the next level
                     check_hiscores(level_number, level_time_elapsed, life_time_elapsed, level_deaths, player_name)
                     game_loop(level_number+1)
@@ -192,9 +193,10 @@ def game_loop(level_number):
             player.yvel += 0.1
             display_death_cloud(player, camera, particles)
             for e in pygame.event.get():
-                if e.type == QUIT: raise SystemExit, "QUIT" # if they hit the x button of the window, quit the game and print "QUIT"
+                if e.type == QUIT:
+                    raise SystemExit("QUIT") # if they hit the x button of the window, quit the game and print "QUIT"
                 if e.type == KEYDOWN and e.key == K_ESCAPE: # if they hit the escape key, quit the game and print "ESCAPE"
-                    raise SystemExit, "ESCAPE"
+                    raise SystemExit("ESCAPE")
                 if e.type == KEYDOWN and e.key == K_RETURN: # if they hit space, reset the level
                     game_loop(level_number)
 

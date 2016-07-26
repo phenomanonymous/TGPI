@@ -32,7 +32,7 @@ def create_level(level_number):
         if os.path.isfile("levels/youwin.txt"):
             filename = "levels/youwin.txt"
         else:
-            raise SystemExit, "Game Win Level not found"
+            raise SystemExit("Game Win Level not found")
     make_sprites() # cuts up the sprite sheet and makes individual sprite blocks out of it
     file = open(filename, 'r') # open the text file of the level the player is currently on in order to create the level
     level = file.readlines() # reads in the textfile to a variable
