@@ -135,7 +135,7 @@ class Player(Entity):
                 elif self.gravity < 0:
                     self.image = self.face_right_inverted.convert()
             else:
-                print "wtf"
+                print("Somehow not left or right")
 
         if self.invincible:
             self.image = self.sprite_invincible

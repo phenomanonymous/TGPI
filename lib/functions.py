@@ -129,7 +129,7 @@ def teleport(entity, camera, particles, left, right, platforms):
                 if exit_loc > entity.rect.x:
                     entity.rect.x = exit_loc
             else:
-                print "this should never happen what the fuck" #somehow left or right is true, but we didnt hit either left or right individually
+                print("Somehow not left or right") #somehow left or right is true, but we didnt hit either left or right individually
         else:  # player is holding space while not moving along the x-axis
             entity.boosting = False
     #####################################
@@ -153,7 +153,7 @@ def ghost_collide(ghost, platforms, direction):
                     ghost.rect.left = p.rect.right
                     ghost_collide(ghost, platforms, direction)
                 else:
-                    print "how the fuck did this happen"
+                    print("Direction = 0")
     return ghost.rect.x
 
 def display_enter_poof(entity, camera, particles, left, right):
