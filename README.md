@@ -5,8 +5,8 @@ Welcome to my game, I have no clue what to call it yet.  In the meantime, I've d
 This is a 2d platformer developed in python/pygame that I wrote as a challenge/project to teach myself python and make my first game.
 
 Here's what you'll need to run the game:
-* Python 2.7
-* Pygame 1.9.2
+* Python 2.7+ (If on windows, make sure to add python to your PATH)
+* Pygame 1.9.2 (Run tgpi.py with sudo privileges the first time to install this automatically)
 	
 Please make sure to download the correct installer for your architecture and operating system.  
 After this, you should already be all set to go.
