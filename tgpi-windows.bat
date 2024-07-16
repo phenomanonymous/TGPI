@@ -1,0 +1,2 @@
+python tgpi.py
+pause

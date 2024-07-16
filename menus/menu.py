@@ -11,6 +11,13 @@ README on the bottom of document.
       more abuot license you can find in data/coders-crux/license.txt
 '''
 
+try:
+    # Python 2
+    xrange
+except NameError:
+    # Python 3, xrange is now named range
+    xrange = range
+
 import pygame
 from pygame.locals import *
 
